@@ -12,8 +12,8 @@ In "AnalysisSteering.h" remove the "process" function declaration.
 ***
 Take the following from braggPlot_v5 (and look at the differences with 
 the v4 version):
-- the new version of "AnalysisInfo.h",
-- the new version of "AnalysisSteering.h,cc",
+- the new version of "AnalysisInfo.h",  aggiunto enum AnalysisStatus { begin, end };
+- the new version of "AnalysisSteering.h,cc", aggiunto la funzione update
 - the new version of "main.cc".
 
 ***
