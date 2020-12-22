@@ -7,9 +7,6 @@
 
 using namespace std;
 
-Constants cost;
-
-
 ParticleReco::ParticleReco() {
 }
 
@@ -64,16 +61,16 @@ void ParticleReco::update( const Event& ev ) {
     // for positive or negative particles respectively
     // update positive/negative track counters
     sumEnK0 += Utilities::energy ( par->Px, par->Py, par->Pz,
-                        cost.massPion );
+                        Constants::massPion );
 
     if ( par->q == 1 ){
       sumEnL0 +=  Utilities::energy ( par->Px, par->Py, par->Pz,
-                          cost.massProton );
+                          Constants::massProton );
       ++p;
       }
     else {
       sumEnL0 += Utilities::energy ( par->Px, par->Py, par->Pz,
-                          cost.massPion );
+                          Constants::massPion );
       ++n;
       }
 
@@ -89,8 +86,8 @@ void ParticleReco::update( const Event& ev ) {
 
    // compare invariant masses with known values and set final values
    // ( type, energy and mass )
-    if ( fabs( K0exp - cost.massK0      ) <
-         fabs( L0exp - cost.massLambda0 ) ){
+    if ( fabs( K0exp - Constants::massK0      ) <
+         fabs( L0exp - Constants::massLambda0 ) ){
             mass   =   K0exp;
             energy = sumEnK0;
             type   =      K0;

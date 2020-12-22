@@ -132,7 +132,8 @@ void ParticleMass::pCreate( const std::string& name, float min, float max ) {
   // create mass distribution for events with mass in given range
 
   // create name for TH1F object
-  const char* hName = ( "mass" + name ).c_str();
+  std::string histname = "mass" + name;
+  const char* hName = histname.c_str();
 
   // create TH1F and statistic objects and store their pointers
   Particle* pm = new Particle;

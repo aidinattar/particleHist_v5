@@ -145,7 +145,8 @@ void ParticleLifetime::pCreate( const std::string&        name,
   // create mass distribution for events with mass in given range
 
   // create name for TH1F object
-  const char* hName = ( "time" + name ).c_str();
+  std::string histname = "time" + name;
+  const char* hName = histname.c_str();
 
   // create TH1F and statistic objects and store their pointers
   Particle* pm = new Particle;

@@ -7,12 +7,11 @@
 
 struct Constants {
     
-    const double massPion      =   0.1395706;
-    const double massProton    =    0.938272;
-    const double massK0        =    0.497611;
-    const double massLambda0   =    1.115683;
-    const double lightVelocity = 0.029979246;
-    
+    static constexpr double massPion      =   0.1395706;
+    static constexpr double massProton    =    0.938272;
+    static constexpr double massK0        =    0.497611;
+    static constexpr double massLambda0   =    1.115683;
+    static constexpr double lightVelocity = 0.029979246;
 
 };
 

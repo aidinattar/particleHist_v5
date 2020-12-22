@@ -8,8 +8,6 @@
 
 using namespace std;
 
-
-
 ProperTime::ProperTime() {
 }
 
@@ -20,7 +18,6 @@ ProperTime::~ProperTime() {
 
 // recompute tag informations for new event
 void ProperTime::update( const Event& ev ) {
-  Constants cost;
   
   // compute distance from the origin
   double d = sqrt( pow( ev.getX(), 2 ) +
@@ -36,7 +33,7 @@ void ProperTime::update( const Event& ev ) {
   double p = sqrt( e * e - m * m );
 
   // compute decay time
-  time = d * m / ( p * cost.lightVelocity );
+  time = d * m / ( p * Constants::lightVelocity );
   
   return;
 

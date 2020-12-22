@@ -44,6 +44,10 @@ bool LifetimeFit::add( const Event& ev ) {
   if ( mass < massMin || mass > massMax ) 
     return false;
 
+  // check for time being in range
+  if ( time < timeMin || time > timeMax )
+    return false;
+
   // update decay times
   decay_times.push_back( time );
 
